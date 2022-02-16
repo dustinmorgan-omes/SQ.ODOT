@@ -19,3 +19,13 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'globalVariable.globalVariableAssignment.assignVariable'('Web', 'Travel Test Suite', 'Functionality', 'FirstTestCase')
 
+WebUI.openBrowser(GlobalVariable.baseURL)
+
+WebUI.maximizeWindow()
+
+WebUI.click(findTestObject('Home Page/Dismiss Modal Button'))
+
+WebUI.click(findTestObject('Navigation Bar/For Oklahomans - Link'))
+
+WebUI.verifyElementText(findTestObject('For Oklahomans Page/For Oklahomans - Header'), 'For Oklahomans')
+
