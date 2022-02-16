@@ -27,9 +27,11 @@ class NewTestListener {
 	 * Executes after every test case ends.
 	 * @param testCaseContext related information of the executed test case.
 	 */
-	/*@AfterTestCase
-	def postTestResults(TestCaseContext testCaseContext) {
-		GlobalVariable.TestResult = testCaseContext.testCaseStatus
-		WS.sendRequest(findTestObject('Splunk Integration/Post_to_Splunk'))
-	}*/
+	@AfterTestCase
+	def closeBrowser() {WebUI.closeBrowser()}
+	
+	//def postTestResults(TestCaseContext testCaseContext) {
+	//	GlobalVariable.TestResult = testCaseContext.testCaseStatus
+	//	WS.sendRequest(findTestObject('Splunk Integration/Post_to_Splunk'))
+	//}
 }
